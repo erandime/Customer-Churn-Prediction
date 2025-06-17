@@ -1,5 +1,5 @@
 # Telco Customer Churn Prediction
-## 1 Introduction
+## 1. Introduction
 ### 1.1 Nature of the Business Problem 
 
 In a competitive telecommunications industry, retaining existing customers is significantly more cost-effective than acquiring new ones​. High churn not only reduces revenue but also increases operational costs related to customer acquisition and onboarding. This report addresses the problem of customer churn by developing a predictive model to identify at-risk customers in advance. By leveraging available customer data, the goal is to provide Telco with actionable insights that support strategic decision-making for customer retention. 
@@ -16,11 +16,11 @@ A predictive model will be developed to identify customers at high risk of churn
 
 - Improve customer experience and loyalty 
 
-## 1.3 Available Data Resources 
+### 1.3 Available Data Resources 
 
 The Telco Customer Churn dataset was selected from Kaggle, which contains 7,043 records and 21 features, focusing on customer attributes relevant to churn.
 
-## 1.4 Limitations and Issues 
+### 1.4 Limitations and Issues 
 
 - The dataset covers only customers who left in the last month, limiting long-term churn analysis. 
 
@@ -82,6 +82,7 @@ Stratified 80:20 split preserved churn distribution across training and test set
 ### 2.6 Data Mining Technique Selection  
 
 Technique - Classification: Ideal for predicting categorical labels like churn. Provides probabilities and interpretable outputs. 
+
 ---
 ## 3. Implementation 
 
@@ -133,7 +134,7 @@ To enhance model performance, ‘RandomizedSearchCV’ was used for hyperparamet
 
 - New customer inputs were transformed using the saved encoders and fed into the trained model. The output included both a binary churn prediction and a probability score. 
 ---
-## 4 Results
+## 4. Results
 Repository Contents
 
 - `Customer_Churn_Prediction.ipynb`: End-to-end notebook including:
