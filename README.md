@@ -194,8 +194,9 @@ Repository Contents
 - By aligning predictions with targeted actions, the company can retain more customers, reduce acquisition costs, and foster long-term loyalty, directly supporting the project’s initial business goals. 
 
 ---
-## How to Run
+## How to Run on Google Colab
 
-Clone this repository:
-```bash
-[git clone https://github.com/erandime/Customer-Churn-Prediction.git]
+Click the badge below to open and run the notebook in Colab:
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/erandime/Customer-Churn-Prediction/blob/main/Customer_Churn_Prediction.ipynb)
+
