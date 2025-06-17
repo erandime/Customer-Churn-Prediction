@@ -186,6 +186,7 @@ Repository Contents
 | **Payment Method**   | Highest churn seen with electronic check users. | Promote auto-pay or app-based payment options. |
 | **Tenure & Charges** | Early-life customers with high monthly charges are more likely to churn. | Offer welcome deals and proactive support in the first few months. |
 
+---
 
 - To operationalize the model, it can be integrated into the company’s Customer Relationship Management system to flag high-risk customers in real time. These risk scores can trigger targeted retention actions like personalized discounts, loyalty rewards, or proactive outreach. 
 
