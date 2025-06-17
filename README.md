@@ -177,7 +177,7 @@ Repository Contents
   - Proactive outreach: XGBoost’s higher recall makes it suitable when the priority is to retain as many potential churners as possible, even false positives. 
 
 - Both models also reveal key churn drivers, like contract type, internet service, and charges. Actionable recommendations based on these are outlined below.
-  | Churn Driver       | Insight | Recommended Business Action |
+| Churn Driver       | Insight | Recommended Business Action |
 |--------------------|---------|------------------------------|
 | **Internet Service** | Fiber optic users churn more than DSL or ‘No Internet’. | Investigate service quality. Improve speed and reliability. Set clearer expectations. |
 | **Premium Services** | Customers without add-ons like ‘OnlineSecurity’ churn more. | Promote premium services via campaigns or bundled deals. |
