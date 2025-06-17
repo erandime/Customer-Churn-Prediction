@@ -58,11 +58,11 @@ EDA was performed to understand data distributions, feature relationships, and c
 
 - Numerical Feature Analysis 
 
-- - Histograms were plotted for ‘Tenure’, ‘MonthlyCharges’, and ‘TotalCharges’ to inspect their distributions including mean and median lines for comparison. 
+  - Histograms were plotted for ‘Tenure’, ‘MonthlyCharges’, and ‘TotalCharges’ to inspect their distributions including mean and median lines for comparison. 
 
-- - Boxplots were used to examine how numerical features vary by churn status, highlighting trends and outliers. 
+  - Boxplots were used to examine how numerical features vary by churn status, highlighting trends and outliers. 
 
-- - A correlation heatmap was generated for numerical features to assess multicollinearity.  
+  - A correlation heatmap was generated for numerical features to assess multicollinearity.  
 
 - Categorical Feature Analysis 
 Stacked bar charts were used to visualize churn proportions across key categorical groups (e.g., demographics, services, billing methods), revealing churn drivers. 
