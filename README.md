@@ -200,3 +200,13 @@ Click the badge below to open and run the notebook in Colab:
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/erandime/Customer-Churn-Prediction/blob/main/Customer_Churn_Prediction.ipynb)
 
+> **Note:**  
+> If the notebook tries to load the dataset from Google Drive like this:  
+> ```python
+> df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+> ```
+> Replace it with this line to load it directly from GitHub:  
+> ```python
+> df = pd.read_csv("https://raw.githubusercontent.com/erandime/Customer-Churn-Prediction/main/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+> ```
+
