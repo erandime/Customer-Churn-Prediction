@@ -33,7 +33,7 @@ The Telco Customer Churn dataset was selected from Kaggle, which contains 7,043 
 - Dataset has minor issues including blank strings in the ‘TotalCharges’ column (11 rows) and inconsistent category labels across several service-related columns. 
 
 - The target variable (Churn) is imbalanced, which can affect model performance. 
-
+---
 ## 2. Methodology 
 
 ### 2.1 Data Harvesting  
@@ -82,24 +82,24 @@ Stratified 80:20 split preserved churn distribution across training and test set
 ### 2.6 Data Mining Technique Selection  
 
 Technique - Classification: Ideal for predicting categorical labels like churn. Provides probabilities and interpretable outputs. 
-
+---
 ## 3. Implementation 
 
 ### 3.1 Model Development 
 
 - The following classification models were used ​:  
 
-- - Decision Tree: Chosen for its simplicity, interpretability, and ability to handle both categorical and numerical features without requiring feature scaling. Its tree structure enables identification of feature importance. 
+  - Decision Tree: Chosen for its simplicity, interpretability, and ability to handle both categorical and numerical features without requiring feature scaling. Its tree structure enables identification of feature importance. 
 
-- - Random Forest: Selected for its robustness to outliers, feature collinearity, and class imbalance. As an ensemble of decision trees, it improves prediction accuracy and generalization while providing reliable feature rankings. 
+  - Random Forest: Selected for its robustness to outliers, feature collinearity, and class imbalance. As an ensemble of decision trees, it improves prediction accuracy and generalization while providing reliable feature rankings. 
 
-- - XGBoost: Included for its superior performance in handling complex interactions, imbalanced classes, and noisy data through gradient boosting and regularization. It delivers high accuracy and ranks churn drivers effectively. 
+  - XGBoost: Included for its superior performance in handling complex interactions, imbalanced classes, and noisy data through gradient boosting and regularization. It delivers high accuracy and ranks churn drivers effectively. 
 
 - Imbalance handling:  
 
-- class_weight='balanced' for Decision Tree and Random Forest​ 
+  - class_weight='balanced' for Decision Tree and Random Forest​ 
 
-- scale_pos_weight for XGBoost ​(Chen and Guestrin, 2016)​ 
+  - scale_pos_weight for XGBoost
 
 ### 3.2 Evaluation Metrics  
 
@@ -117,7 +117,7 @@ Model performance was evaluated using :
 
 ### 3.3 Hyperparameter Tuning 
 
-To enhance model performance, ‘RandomizedSearchCV’ was used for hyperparameter tuning. This method efficiently samples hyperparameter combinations from predefined ranges to balance exploration and computational efficiency ​(Bergstra and Bengio, 2012)​. 
+To enhance model performance, ‘RandomizedSearchCV’ was used for hyperparameter tuning. This method efficiently samples hyperparameter combinations from predefined ranges to balance exploration and computational efficiency​. 
 
 ### 3.4 Final Model  
 
@@ -132,7 +132,7 @@ To enhance model performance, ‘RandomizedSearchCV’ was used for hyperparamet
 - The model’s ‘feature_importances_’ attribute was used to rank the most influential predictors and visualized using a bar plot for interpretability. 
 
 - New customer inputs were transformed using the saved encoders and fed into the trained model. The output included both a binary churn prediction and a probability score. 
-
+---
 ## 4 Results
 Repository Contents
 
@@ -155,11 +155,10 @@ Repository Contents
 
 - EDA also revealed strong churn associations: 
 
-- - Numerical: Tenure, MonthlyCharges, TotalCharges
+  - Numerical: Tenure, MonthlyCharges, TotalCharges
 
-- - Categorical: Contract, InternetService, PaymentMethod 
-
-Weak predictors such as Gender and PhoneService were removed before modeling. 
+  - Categorical: Contract, InternetService, PaymentMethod.
+  - Weak predictors such as Gender and PhoneService were removed before modeling. 
 
 - Random Forest delivered the highest accuracy and precision, supporting cost-effective retention strategies. XGBoost yielded highest recall and F1-score, excelling at identifying more churners. 
 
@@ -173,26 +172,23 @@ Weak predictors such as Gender and PhoneService were removed before modeling.
 
 - The two selected models, Random Forest and XGBoost, efficiently handled categorical and numerical features despite feature correlation and class imbalance. This makes them well suited for real-world customer data. 
 
-- - Targeted retention: Random Forest’s high precision helps reduce unnecessary outreach by focusing on customers most likely to churn, maximizing retention return on investment. 
+  - Targeted retention: Random Forest’s high precision helps reduce unnecessary outreach by focusing on customers most likely to churn, maximizing retention return on investment. 
 
-- - Proactive outreach: XGBoost’s higher recall makes it suitable when the priority is to retain as many potential churners as possible, even false positives. 
+  - Proactive outreach: XGBoost’s higher recall makes it suitable when the priority is to retain as many potential churners as possible, even false positives. 
 
-- Both models also reveal key churn drivers, like contract type, internet service, and charges. Actionable recommendations based on these are outlined in table below. 
-
-- To operationalize the model, it can be integrated into the company’s Customer Relationship Management system to flag high-risk customers in real time. These risk scores can trigger targeted retention actions like personalized discounts, loyalty rewards, or proactive outreach. 
-
-- By aligning predictions with targeted actions, the company can retain more customers, reduce acquisition costs, and foster long-term loyalty, directly supporting the project’s initial business goals. 
-
-- Actionable Business Insights
-
-| Churn Driver       | Insight | Recommended Business Action |
+- Both models also reveal key churn drivers, like contract type, internet service, and charges. Actionable recommendations based on these are outlined below.
+  | Churn Driver       | Insight | Recommended Business Action |
 |--------------------|---------|------------------------------|
 | **Internet Service** | Fiber optic users churn more than DSL or ‘No Internet’. | Investigate service quality. Improve speed and reliability. Set clearer expectations. |
 | **Premium Services** | Customers without add-ons like ‘OnlineSecurity’ churn more. | Promote premium services via campaigns or bundled deals. |
 | **Contract Type**    | Month-to-month users churn more than long-term contracts. | Incentivize switch to longer-term plans with discounts or loyalty points. |
 | **Billing Method**   | Paperless billing users show higher churn. | Improve email notifications and digital bill visibility. |
 | **Payment Method**   | Highest churn seen with electronic check users. | Promote auto-pay or app-based payment options. |
-| **Tenure & Charges** | Early-life customers with high monthly charges are more likely to churn. | Offer welcome deals and proactive support in the first few months. |
+| **Tenure & Charges** | Early-life customers with high monthly charges are more likely to churn. | Offer welcome deals and proactive support in the first few months. | 
+
+- To operationalize the model, it can be integrated into the company’s Customer Relationship Management system to flag high-risk customers in real time. These risk scores can trigger targeted retention actions like personalized discounts, loyalty rewards, or proactive outreach. 
+
+- By aligning predictions with targeted actions, the company can retain more customers, reduce acquisition costs, and foster long-term loyalty, directly supporting the project’s initial business goals. 
 
 ---
 ## How to Run
